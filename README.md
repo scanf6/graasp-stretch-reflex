@@ -4,14 +4,14 @@ This is the default theme for all Labs repository. Initially configured with Red
 
 This Lab was created using [Graasp App Starter React](https://github.com/react-epfl/graasp-app-starter-react)
 
-![image](https://github.com/graasp/graasp-lab-arterial-pressure/blob/25/update-readme/public/preview.png)
+![image](https://github.com/graasp/graasp-lab-default-theme/blob/develop/public/preview.png)
 
 ## Quick Start
 
 1- Clone this repository by downloading directly or running this command:
 
 ```
-git clone git@github.com:graasp/graasp-lab-arterial-pressure.git
+git clone git@github.com:graasp/graasp-lab-default-theme.git
 ```
 
 2- Install dependencies by running `yarn` or `npm install` from the project directory to install all dependencies. In case your don't have them installed, go
@@ -22,8 +22,8 @@ git clone git@github.com:graasp/graasp-lab-arterial-pressure.git
 ## Get involved
 
 Contact us at our Graasp React Group [here](http://graasp.eu/)
-Help us improve by creating [new issues](https://github.com/graasp/graasp-lab-arterial-pressure/issues/new.
+Help us improve by creating [new issues](https://github.com/graasp/graasp-lab-default-theme/issues/new.
 
 ## Licence
 
-See the [Licence](https://github.com/graasp/graasp-lab-arterial-pressure/blob/1/main-view/LICENSE)
+See the [Licence](https://github.com/graasp/graasp-lab-default-theme/blob/1/main-view/LICENSE)
