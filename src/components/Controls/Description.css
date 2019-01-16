@@ -35,3 +35,6 @@
 .title-switch {
   padding-top: 2rem;
 }
+.SettingManager-container button {
+  outline: 0;
+}

@@ -5,7 +5,7 @@ import './Preview.css';
 
 export const Preview = ({ t }) => (
   <div className="preview-container">
-    <p>{t('This is Preview')}</p>
+    <p>&nbsp;</p>
   </div>
 );
 
