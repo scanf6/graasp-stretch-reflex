@@ -2,6 +2,14 @@
   "translations" : {
     "This is the student view. Switch to the teacher view by clicking on the URL below.": "This is the student view. Switch to the teacher view by clicking on the URL below.",
     "This is the teacher view. Switch to the student view by clicking on the URL below.": "This is the teacher view. Switch to the student view by clicking on the URL below.",
-    "Welcome to the Graasp App Starter Kit": "Welcome to the Graasp App Starter Kit"
+    "Welcome to the Graasp App Starter Kit": "Welcome to the Graasp App Starter Kit",
+    "Lab Title": "Lab Title to be updated",
+    "Lab Explanation": "Missing Lab Description to be updated",
+    "Observe": "Observe",
+    "Test": "Test",
+    "Coming Soon!": "Coming Soon!",
+    "Choose your panel color": "Choose your panel color",
+    "Language": "Language",
+    "Display Lab title": "Display Lab title"
   }
 }

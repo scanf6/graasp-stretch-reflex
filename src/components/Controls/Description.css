@@ -1,0 +1,37 @@
+.description-container {
+  background-color: #ffffff;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  height: 100%;
+  text-align: center;
+}
+.observe-button, .test-button {
+  width: 50%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0;
+  font-size: 1.6rem;
+  color: #000;
+}
+.test-button, .test-button:hover {
+  border: 1px solid #dedede;
+  color: #dedede;
+  background-color: rgba(0,0,0,0);
+}
+.test-button-active, .observe-button-active {
+  background-color: #dedede;
+  font-weight: bold;
+}
+.test-button-active:hover,
+.observe-button-active:hover {
+  background-color: #EEEEEE;
+  COLOR: #555555;
+}
+#disabledBtn {
+  cursor: help;
+}
+.resume-container {
+  margin-top: 2rem;
+}
+.title-switch {
+  padding-top: 2rem;
+}

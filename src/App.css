@@ -1,11 +1,16 @@
+body {
+  background: #fafafa;
+}
+html, body, #root, #root>div, .app-loader {
+  height: 100%;
+  background-color: #fafafa;
+}
 .App {
   text-align: center;
 }
-
 .App-body {
   padding: 2rem;
 }
-
 @keyframes App-logo-spin {
   from { transform: rotate(-30deg); }
   to { transform: rotate(30deg); }

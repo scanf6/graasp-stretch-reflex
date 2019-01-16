@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Row, Col } from 'reactstrap';
 import { withNamespaces } from 'react-i18next';
 import Select from 'react-select';
-import { options } from '../constants/langs';
-import { ReactComponent as Logo } from '../resources/logo.svg';
+import { options } from '../config/options';
 import './Header.css';
 
 class Header extends Component {
@@ -52,7 +51,6 @@ class Header extends Component {
             />
           </Col>
         </Row>
-        <Logo className="App-logo" />
         <h1 className="App-title">{t('Welcome to the Graasp App Starter Kit')}</h1>
       </header>
     );
