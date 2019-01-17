@@ -1,4 +1,4 @@
-import { SET_THEME_COLOR, SET_LANGUAGE } from './types';
+import { SET_THEME_COLOR, SET_LANGUAGE, SET_TITLE_STATE } from './types';
 
 export function themeColor({ newColor }) {
   return {
@@ -11,5 +11,12 @@ export function defaultLang({ newLang }) {
   return {
     type: SET_LANGUAGE,
     payload: newLang,
+  };
+}
+
+export function titleState({ showTitle }) {
+  return {
+    type: SET_TITLE_STATE,
+    payload: showTitle,
   };
 }

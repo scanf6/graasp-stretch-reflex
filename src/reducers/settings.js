@@ -1,11 +1,13 @@
 import {
   SET_LANGUAGE,
   SET_THEME_COLOR,
+  SET_TITLE_STATE,
 } from '../actions/types';
 
 const INITIAL_STATE = {
   defaultLang: 'en',
-  SET_THEME_COLOR: '#2196F5',
+  themeColor: '#2196F5',
+  showTitle: true,
 };
 
 export default (state = INITIAL_STATE, { type, payload }) => {
@@ -19,6 +21,11 @@ export default (state = INITIAL_STATE, { type, payload }) => {
       return {
         ...state,
         themeColor: payload,
+      };
+    case SET_TITLE_STATE:
+      return {
+        ...state,
+        showTitle: payload,
       };
     default:
       return state;

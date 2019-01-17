@@ -12,20 +12,14 @@ class StudentView extends Component {
   static propTypes = {
     t: PropTypes.func.isRequired,
     themeColor: PropTypes.string.isRequired,
+    showTitle: PropTypes.bool.isRequired,
   };
 
   state = AppState;
 
-  toggleTitle = () => {
-    const { showTitle } = this.state;
-    this.setState({
-      showTitle: !showTitle,
-    });
-  }
-
   render() {
-    const { obserViewActive, showTitle } = this.state;
-    const { t, themeColor } = this.props;
+    const { obserViewActive } = this.state;
+    const { t, themeColor, showTitle } = this.props;
     const defaultColor = themeColor || '#0f94f8';
     return (
       <div className="main-container">
@@ -45,8 +39,6 @@ class StudentView extends Component {
             <Description
               t={t}
               obserViewActive={obserViewActive}
-              toggleTitle={this.toggleTitle}
-              showTitle={showTitle}
             />
           </Col>
         </Row>
@@ -56,6 +48,7 @@ class StudentView extends Component {
 }
 const mapStateToProps = state => ({
   themeColor: state.setting.themeColor,
+  showTitle: state.setting.showTitle,
 });
 
 const connectedComponents = connect(mapStateToProps)(StudentView);

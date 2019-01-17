@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Switch from 'react-switch';
+import {
+  Col,
+  Row,
+} from 'reactstrap';
 import Modal from 'react-responsive-modal';
 import { withStyles } from '@material-ui/core/styles';
 import AddIcon from '@material-ui/icons/Settings';
@@ -32,6 +37,8 @@ const SettingManager = ({
   onCloseModal,
   handleChangeComplete,
   handleChangeLang,
+  toggleTitle,
+  showTitle,
 }) => {
   const defaultColor = themeColor || '#0f94f8';
   return (
@@ -54,6 +61,18 @@ const SettingManager = ({
           handleChangeLang={handleChangeLang}
           t={t}
         />
+        <Row className="title-switch">
+          <Col xs={8}>
+            <h4 className="display-title">{t('Display Lab title')}</h4>
+          </Col>
+          <Col xs={4}>
+            <Switch
+              onChange={toggleTitle}
+              checked={showTitle}
+              id="title-switch"
+            />
+          </Col>
+        </Row>
       </Modal>
     </div>
   );
@@ -64,14 +83,17 @@ SettingManager.propTypes = {
   themeColor: PropTypes.string.isRequired,
   handleChangeLang: PropTypes.func.isRequired,
   handleChangeComplete: PropTypes.func.isRequired,
+  toggleTitle: PropTypes.func.isRequired,
   onCloseModal: PropTypes.func.isRequired,
   onOpenModal: PropTypes.func.isRequired,
   openModal: PropTypes.bool.isRequired,
+  showTitle: PropTypes.bool.isRequired,
   classes: PropTypes.shape({}).isRequired,
 };
 
 const mapStateToProps = state => ({
   themeColor: state.setting.themeColor,
+  showTitle: state.setting.showTitle,
 });
 
 const connectedComponent = connect(mapStateToProps)(SettingManager);
