@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withNamespaces } from 'react-i18next';
 import PropTypes from 'prop-types';
+import i18n from '../../config/i18n';
 import TabComponent from './TabComponent';
 import Resume from './Resume';
 import SettingManager from './Settings/SettingManager';
@@ -22,10 +23,10 @@ export class Description extends Component {
 
 handleChangeLang = (lang) => {
   const newLang = lang.value;
-  const {
-    dispatchDefaultLanguage,
-  } = this.props;
+  const { dispatchDefaultLanguage } = this.props;
+  i18n.changeLanguage(newLang);
   dispatchDefaultLanguage({ newLang });
+  postMessage({ default_lang: newLang });
 }
 
 onOpenModal = () => {
