@@ -87,7 +87,7 @@ class PersistentDrawerRight extends React.Component {
                 className={classes.fab}
                 style={{ backgroundColor: themeColor, outline: 'none' }}
               >
-                { open ? <MenuIcon style={{ color: 'white' }} /> : <ChevronRightIcon /> }
+                { open ? <ChevronRightIcon /> : <MenuIcon style={{ color: 'white' }} /> }
               </Fab>
             )
           }
