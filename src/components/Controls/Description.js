@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { withNamespaces } from 'react-i18next';
 import PropTypes from 'prop-types';
 import i18n from '../../config/i18n';
-import TabComponent from './TabComponent';
 import Resume from './Resume';
 import SettingManager from './Settings/SettingManager';
 import './Description.css';
@@ -49,17 +48,10 @@ toggleTitle = () => {
 }
 
 render() {
-  const {
-    obserViewActive,
-    t,
-  } = this.props;
+  const { t } = this.props;
   const { openModal } = this.state;
   return (
     <div className="description-container">
-      <TabComponent
-        obserViewActive={obserViewActive}
-        t={t}
-      />
       <Resume t={t} />
       <SettingManager
         handleChangeLang={this.handleChangeLang}
@@ -81,7 +73,6 @@ Description.propTypes = {
   dispatchDefaultLanguage: PropTypes.func.isRequired,
   dispatchThemeColor: PropTypes.func.isRequired,
   dispatchTitleState: PropTypes.func.isRequired,
-  obserViewActive: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
