@@ -20,7 +20,7 @@ import Styles from './Styles';
 
 const styles = Styles;
 
-class PersistentDrawerRight extends React.Component {
+class SideMenu extends React.Component {
   state = { open: false };
 
   handleDrawerOpen = () => {
@@ -52,7 +52,7 @@ class PersistentDrawerRight extends React.Component {
               [classes.appBarShift]: open,
             })}
           >
-            <Toolbar disableGutters={!open} style={{ backgroundColor: themeColor }}>
+            <Toolbar disableGutters style={{ backgroundColor: themeColor }}>
               <IconButton
                 color="inherit"
                 aria-label="Open drawer"
@@ -119,7 +119,7 @@ class PersistentDrawerRight extends React.Component {
   }
 }
 
-PersistentDrawerRight.propTypes = {
+SideMenu.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   theme: PropTypes.shape({}).isRequired,
   themeColor: PropTypes.string.isRequired,
@@ -133,6 +133,6 @@ const mapStateToProps = state => ({
   showTitle: state.setting.showTitle,
 });
 
-const connectedComponent = connect(mapStateToProps)(PersistentDrawerRight);
+const connectedComponent = connect(mapStateToProps)(SideMenu);
 
 export default withStyles(styles, { withTheme: true })(connectedComponent);
