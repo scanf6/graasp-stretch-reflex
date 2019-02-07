@@ -1,6 +1,12 @@
 import { combineReducers } from 'redux';
-import settings from './settings';
+import layoutReducer from './layout';
+import appInstanceReducer from './appInstance';
+import contextReducer from './context';
+import userReducer from './users';
 
 export default combineReducers({
-  setting: settings,
+  layout: layoutReducer,
+  appInstance: appInstanceReducer,
+  context: contextReducer,
+  user: userReducer,
 });
