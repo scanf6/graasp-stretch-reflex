@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Qs from 'qs';
 import TeacherView from './teacher/TeacherView';
@@ -40,4 +40,4 @@ export class App extends Component {
   }
 }
 
-export default withNamespaces('translations')(App);
+export default withTranslation()(App);

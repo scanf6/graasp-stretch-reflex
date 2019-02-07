@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { Col, Row } from 'reactstrap';
 import Select from 'react-select';
 import { options } from '../../../config/options';
@@ -31,4 +31,4 @@ LangBox.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withNamespaces('translations')(LangBox);
+export default withTranslation()(LangBox);
