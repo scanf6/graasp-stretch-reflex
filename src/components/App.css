@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+.App-body {
+  padding: 2rem;
+}
+.App-loader {
+  position: fixed;
+  background: #5050d2;
+  padding-top: 20%;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  text-align: center;
+}
+
+.App-loader-logo {
+  height: 10rem;
+}
+
+.App-loader-progress-bar-container {
+  width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+.App-loader-progress-bar {
+  background-color: #5050d2 !important;
+  opacity: 0.75;
+}

@@ -6,12 +6,16 @@ import { Col, Row } from 'reactstrap';
 const SwitchBox = ({
   handleChangeComplete,
   t,
+  themeColor,
 }) => (
   <div className="control-container">
     <Row>
       <Col xs="12">
         <h4 className="modal-color-title">{t('Choose your panel color')}</h4>
-        <CirclePicker onChangeComplete={handleChangeComplete} />
+        <CirclePicker
+          color={themeColor}
+          onChangeComplete={handleChangeComplete}
+        />
       </Col>
     </Row>
   </div>
@@ -20,6 +24,7 @@ const SwitchBox = ({
 SwitchBox.propTypes = {
   handleChangeComplete: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
+  themeColor: PropTypes.string.isRequired,
 };
 
 export default SwitchBox;
