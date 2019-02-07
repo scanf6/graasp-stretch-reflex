@@ -1,5 +1,5 @@
 import React from 'react';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import './Preview.css';
 
 export const Preview = () => (
@@ -8,4 +8,4 @@ export const Preview = () => (
 
 Preview.propTypes = {};
 
-export default withNamespaces('translations')(Preview);
+export default withTranslation()(Preview);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'reactstrap';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import Select from 'react-select';
 import { options } from '../config/options';
 import './Header.css';
@@ -57,4 +57,4 @@ class Header extends Component {
   }
 }
 
-export default withNamespaces('translations')(Header);
+export default withTranslation()(Header);

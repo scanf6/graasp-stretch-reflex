@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert, Container } from 'reactstrap';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import './TeacherView.css';
 
@@ -21,4 +21,4 @@ TeacherView.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withNamespaces('translations')(TeacherView);
+export default withTranslation()(TeacherView);
