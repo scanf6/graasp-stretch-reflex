@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import { Col, Row } from 'reactstrap';
 import Select from 'react-select';
-import { options } from '../../../config/options';
+import { options } from '../../config/options';
 
 const LangBox = ({
-  handleChangeLang,
+  handleChangeLanguage,
   t,
 }) => (
   <div className="control-container">
@@ -18,7 +18,7 @@ const LangBox = ({
         <Select
           defaultValue={options[0]}
           options={options}
-          onChange={handleChangeLang}
+          onChange={handleChangeLanguage}
           className="select-lang"
         />
       </Col>
@@ -27,7 +27,7 @@ const LangBox = ({
 );
 
 LangBox.propTypes = {
-  handleChangeLang: PropTypes.func.isRequired,
+  handleChangeLanguage: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
 };
 
