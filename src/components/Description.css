@@ -1,0 +1,21 @@
+.resume-container {
+  margin-top: 1rem;
+}
+.resume-container p {
+  color: #555;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+.resume-container h1 {
+  color: #555;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+}
+.title-switch {
+  padding-top: 1rem;
+}
+.SettingManager-container button {
+  outline: 0;
+}

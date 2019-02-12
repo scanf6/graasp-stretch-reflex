@@ -4,6 +4,33 @@ exports[`<App /> renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
+    dispatchGetAppInstance={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    dispatchGetContext={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    dispatchToggleLoader={[MockFunction]}
     i18n={
       Object {
         "changeLanguage": [MockFunction] {
@@ -22,10 +49,14 @@ ShallowWrapper {
         "defaultNS": "",
       }
     }
+    lang="en"
+    loading={true}
+    mode="default"
     t={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -35,30 +66,124 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
-    "props": Object {},
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          alt="Logo"
+          className="App-loader-logo"
+          src="GraaspLogo.svg"
+        />,
+        <Progress
+          barClassName="App-loader-progress-bar"
+          className="App-loader-progress-bar-container"
+          max={100}
+          tag="div"
+          value={0}
+        />,
+      ],
+      "className": "App-loader",
+    },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Logo",
+          "className": "App-loader-logo",
+          "src": "GraaspLogo.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "barClassName": "App-loader-progress-bar",
+          "className": "App-loader-progress-bar-container",
+          "max": 100,
+          "tag": "div",
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
-      "props": Object {},
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="Logo"
+            className="App-loader-logo"
+            src="GraaspLogo.svg"
+          />,
+          <Progress
+            barClassName="App-loader-progress-bar"
+            className="App-loader-progress-bar-container"
+            max={100}
+            tag="div"
+            value={0}
+          />,
+        ],
+        "className": "App-loader",
+      },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Logo",
+            "className": "App-loader-logo",
+            "src": "GraaspLogo.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "barClassName": "App-loader-progress-bar",
+            "className": "App-loader-progress-bar-container",
+            "max": 100,
+            "tag": "div",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

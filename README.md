@@ -1,4 +1,4 @@
-# Graasp Lab Arterial Pressure
+# Graasp Lab Default Theme
 
 This is the default theme for all Labs repository. Initially configured with Redux, language and theme settings with the controls panel.
 
