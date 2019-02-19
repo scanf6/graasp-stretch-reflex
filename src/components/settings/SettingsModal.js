@@ -36,7 +36,7 @@ const styles = theme => ({
   },
 });
 
-export class SettingManager extends Component {
+export class SettingsModal extends Component {
   state = AppState;
 
   handleToggleHeader = showHeader => () => {
@@ -129,7 +129,7 @@ export class SettingManager extends Component {
   }
 }
 
-SettingManager.propTypes = {
+SettingsModal.propTypes = {
   t: PropTypes.func.isRequired,
   themeColor: PropTypes.string.isRequired,
   classes: PropTypes.shape({}).isRequired,
@@ -150,7 +150,7 @@ const mapDispatchToProps = {
   dispatchToggleHeader: toggleHeader,
 };
 
-const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(SettingManager);
+const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(SettingsModal);
 
 const StyledComponent = withStyles(styles)(ConnectedComponent);
 
