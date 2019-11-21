@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Un stimulus est envoyez au tendon de la rotule",
+    "duration": 760,
+    "popupPosition": [480, 120]
+  },
+  {
+    "title": "Un message nerveux sensitif nait et se propage via le nerf sensitif",
+    "duration": 1950,
+    "popupPosition": [650, 0]
+  },
+  {
+    "title": "Le message sensitif est converti en message moteur",
+    "duration": 300,
+    "popupPosition": [1150, 100]
+  },
+  {
+    "title": "Le message moteur est acheminer jusqua l'effecteur",
+    "duration": 1050,
+    "popupPosition": [850, 280]
+  },
+  {
+    "title": "Une reponse du muscle du quadriceps est generer ayant pour resultat l'extension de la jambe",
+    "duration": 1100,
+    "popupPosition": [240, 120]
+  }
+]

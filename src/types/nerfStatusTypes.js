@@ -1,0 +1,3 @@
+export const CUT_NERF_SENSITIVE = "CUT_NERF_SENSITIVE";
+export const CUT_NERF_MOTOR = "CUT_NERF_MOTOR";
+export const RESET_NERFS = "RESET_NERFS";

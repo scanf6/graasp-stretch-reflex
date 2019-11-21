@@ -1,0 +1,62 @@
+<svg id="moelle2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.02 148.26">
+  <title>Moelle2</title>
+  <g id="Layer_1-2" data-name="Layer 1-2">
+    <path d="M87.89,97.46s38.22,3.06,56.56-1.84,46.78-69.7,59-75.82,22-18.34,39.75-10.7,34.85,26,34.85,26S303.13.85,320.56.54s30.88.92,48.91,9.78,16.82,84.13,47.39,88.08l30.58,3.95-2.14,12.23s-64.51-10.09-73.38-8-24.15,29.48-33.33,32.17-53.19-30-53.19-30S268.28,143,252.68,147.29,209,125,184.2,126.5s-63.9-26-89.58-15.59Z" transform="translate(0 0)" style="fill: #e2e2e2;stroke: #201600;stroke-miterlimit: 10"/>
+    <path d="M169.83,86.15s21.71-46.48,43.41-47.7,46.78,12.23,57.48,19,30-41.89,54.42-38.22S368,47.62,368,47.62s2.75,1.53,7.94,15-16.81,50.45-25.68,50.45S301,88.29,283.56,95.32s-36.07,35.46-55,27.21-58.7-10.7-62.06-16.82S169.83,86.15,169.83,86.15Z" transform="translate(0 0)" style="fill: #8e8179;stroke: #201600;stroke-miterlimit: 10"/>
+    <g id="LinePath">
+      <line x1="23.18" y1="124.2" x2="0.15" y2="131.4" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="38.55 119.71 34.39 120.69 23.18 124.2" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="53.31" y1="116.24" x2="38.55" y2="119.71" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="69.55" y1="112.42" x2="53.31" y2="116.24" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="83.24 109.66 75.97 110.91 69.55 112.42" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="102 106.74 95.54 107.55 83.24 109.66" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="116.72 106.02 107.77 106.02 102 106.74" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="127.42 106.35 120.91 106.02 116.72 106.02" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="135.82 107.14 133.14 106.63 127.42 106.35" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="145.6" y1="108.99" x2="135.82" y2="107.14" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="161.02 113.81 150.88 109.99 145.6 108.99" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="170.74 117.18 165.53 115.5 161.02 113.81" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="182.37" y1="120.92" x2="170.74" y2="117.18" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="193.92 122.83 184.51 121.61 182.38 120.92" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="207.35 124.9 203.16 124.02 193.92 122.83" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="219.27" y1="127.4" x2="207.35" y2="124.9" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="231.45 130.71 225.17 128.64 219.26 127.4" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="242.55" y1="134.37" x2="231.45" y2="130.71" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="258.04 134.37 250.24 136.9 242.56 134.37" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="267.17 124.02 261.55 133.23 258.04 134.37" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="274.41" y1="112.15" x2="267.17" y2="124.02" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <polyline points="276.62 99.13 276.84 108.16 274.41 112.15" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="276.43" y1="91.39" x2="276.62" y2="99.13" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="276.28" y1="85.24" x2="276.43" y2="91.39" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfMotor"/>
+      <line x1="276.01" y1="74.13" x2="276.28" y2="85.24" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="275.68" y1="60.33" x2="276.01" y2="74.13" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="275.46" y1="51.28" x2="275.68" y2="60.33" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <polyline points="273.36 43.81 275.31 45.18 275.46 51.27" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="266.48" y1="38.99" x2="273.36" y2="43.81" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="255.92" y1="31.58" x2="266.48" y2="38.99" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="241.92" y1="21.77" x2="255.92" y2="31.58" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="231.97" y1="14.78" x2="241.92" y2="21.77" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <polyline points="217.33 18.53 228.23 12.16 231.97 14.78" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="206.24" y1="25.01" x2="217.33" y2="18.53" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <polyline points="196 35.36 201.01 28.06 206.24 25.01" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="189.45" y1="44.91" x2="196" y2="35.36" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="185.08" y1="51.28" x2="189.45" y2="44.91" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="179.66" y1="59.18" x2="185.08" y2="51.28" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="175.37" y1="65.43" x2="179.66" y2="59.18" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <polyline points="168.6 74.97 172.28 69.94 175.37 65.44" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="163.79" y1="81.56" x2="168.61" y2="74.97" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="156.62" y1="91.38" x2="163.79" y2="81.56" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <polyline points="144.78 98.21 152.4 97.15 156.62 91.38" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="131.7" y1="100.03" x2="144.78" y2="98.21" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="120.54" y1="101.58" x2="131.7" y2="100.03" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <polyline points="111.06 102.36 117.25 102.04 120.54 101.58" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="99.61" y1="102.96" x2="111.06" y2="102.36" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="86.45" y1="103.64" x2="99.61" y2="102.96" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <polyline points="67.64 104.98 75.97 104.18 86.45 103.64" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="54.49" y1="106.24" x2="67.64" y2="104.98" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="39.37" y1="107.69" x2="54.49" y2="106.24" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="23.18" y1="109.24" x2="39.37" y2="107.69" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+      <line x1="12.07" y1="110.3" x2="23.18" y2="109.24" style="fill: none;stroke-miterlimit: 10" class="lineSegment nerfSensitive"/>
+    </g>
+  </g>
+</svg>

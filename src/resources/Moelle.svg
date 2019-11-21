@@ -1,0 +1,7 @@
+<svg id="moelle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.32 148.26">
+  <title>Moelle</title>
+  <g id="Layer_1-2" data-name="Layer 1-2">
+    <polyline class="moteur" points="276.32 74.53 277.14 108.16 261.85 133.23 250.54 136.9 225.47 128.64 203.46 124.02 184.81 121.61 165.83 115.5 151.18 109.99 133.44 106.63 121.21 106.02 108.07 106.02 95.84 107.55 76.27 110.91 34.69 120.69 0.45 131.4" style="fill: none;stroke: #0006e9;stroke-miterlimit: 10;stroke-width: 3px"/>
+    <polyline class="sensitif" points="12.37 110.3 76.27 104.18 117.55 102.04 152.7 97.15 172.58 69.94 201.31 28.06 228.53 12.16 275.61 45.18 276.32 74.53" style="fill: none;stroke: #00b149;stroke-miterlimit: 10;stroke-width: 3px"/>
+  </g>
+</svg>

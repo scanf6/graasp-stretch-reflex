@@ -1,0 +1,42 @@
+.Flow {
+  border: 1px solid rgba(92, 92, 92, 0.658);
+  background: linear-gradient(
+    to right bottom,
+    rgb(39, 39, 39),
+    rgb(49, 49, 49)
+  );
+  padding: 5px;
+  width: 450px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: absolute;
+  z-index: 999;
+}
+
+.eventsContainer {
+  margin-top: 10px;
+}
+.eventFlow {
+  background: linear-gradient(
+    to right bottom,
+    rgb(77, 77, 77),
+    rgb(77, 77, 77)
+  );
+
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.continueBtn,
+.resetBtn {
+  border: none;
+  background-color: rgb(236, 69, 69);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.continueBtn:disabled {
+  background-color: rgb(146, 146, 146);
+  color: rgb(119, 119, 119);
+}

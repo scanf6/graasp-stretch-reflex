@@ -1,3 +1,87 @@
 .main-container {
+  position: relative;
   padding: 2rem;
+}
+
+#Layer_1 {
+  width: 800px;
+  height: auto;
+}
+
+.legContainer {
+  text-align: center;
+}
+
+.hitButton {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  z-index: 999;
+  border: none;
+  background-color: rgb(236, 69, 69);
+  color: white;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 500px;
+}
+
+.hitButton:disabled {
+  background-color: rgb(128, 128, 128);
+  cursor: initial;
+  color: rgb(201, 201, 201);
+}
+
+.hitButton:disabled::after {
+  animation: none;
+  background-color: rgba(161, 161, 161, 0.582);
+}
+
+.hitButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  animation: wave 0.8s ease-in-out infinite;
+  background-color: rgba(255, 99, 71, 0.582);
+  border-radius: 500px;
+}
+
+.btn {
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.btn--red {
+  background-color: rgb(236, 69, 69);
+}
+.btn--white {
+  background-color: rgb(255, 255, 255);
+  color: #474747;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }

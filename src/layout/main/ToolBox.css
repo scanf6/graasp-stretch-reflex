@@ -1,0 +1,26 @@
+.toolBox {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  color: white;
+  padding: 10px;
+  background: linear-gradient(
+    to right bottom,
+    rgb(39, 39, 39),
+    rgb(49, 49, 49)
+  );
+}
+
+.toolBox b {
+  color: #d24a44;
+}
+
+.toolBox .tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.toolBox .tools button {
+  margin-right: 10px;
+}

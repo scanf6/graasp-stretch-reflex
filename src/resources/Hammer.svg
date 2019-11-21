@@ -1,0 +1,11 @@
+<svg id="hammer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.96 179.35">
+  <title>Asset 1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect x="58.75" y="0.5" width="15.46" height="112.37" style="fill: #d24a43;stroke: #201600;stroke-miterlimit: 10"/>
+        <path d="M31.94,112.87h75.77a24.74,24.74,0,0,1,24.74,24.74v16.49a24.74,24.74,0,0,1-24.74,24.74H31.94A31.44,31.44,0,0,1,.5,147.41v-3.09A31.44,31.44,0,0,1,31.94,112.87Z" style="fill: #d24a43;stroke: #201600;stroke-miterlimit: 10"/>
+      </g>
+    </g>
+  </g>
+</svg>
