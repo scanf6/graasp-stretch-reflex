@@ -1,4 +1,5 @@
-import { ADD_STEP, RESET_FLOW } from "../types/index";
+import { ADD_STEP, RESET_FLOW } from '../types/index';
+
 const initialState = [];
 export default (state = initialState, action) => {
   switch (action.type) {

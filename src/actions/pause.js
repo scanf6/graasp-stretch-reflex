@@ -1,12 +1,13 @@
-import { PAUSE, RUN } from "../types/pauseTypes";
-export const pauseAnimation = () => dispatch => {
+import { PAUSE, RUN } from '../types/pauseTypes';
+
+export const pauseAnimation = () => (dispatch) => {
   dispatch({
-    type: PAUSE
+    type: PAUSE,
   });
 };
 
-export const runAnimation = () => dispatch => {
+export const runAnimation = () => (dispatch) => {
   dispatch({
-    type: RUN
+    type: RUN,
   });
 };

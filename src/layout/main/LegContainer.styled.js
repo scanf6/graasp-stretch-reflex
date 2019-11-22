@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export default styled.p`
+export default styled.div`
   position: relative;
   #leg {
     position: relative;
@@ -10,8 +10,7 @@ export default styled.p`
 
   #pied {
     animation: move 1s linear 4.1s;
-    animation-play-state: ${props =>
-      props.animationStatus === "pause" ? "paused" : "running"};
+    animation-play-state: ${props => (props.animationStatus === 'pause' ? 'paused' : 'running')};
   }
 
   #hammer {
@@ -20,8 +19,7 @@ export default styled.p`
     left: 42.8%;
     transform: rotate(10deg);
     animation: hit 0.8s;
-    animation-play-state: ${props =>
-      props.animationStatus === "pause" ? "paused" : "running"};
+    animation-play-state: ${props => (props.animationStatus === 'pause' ? 'paused' : 'running')};
   }
 
   #moelle,
@@ -44,7 +42,7 @@ export default styled.p`
     position: absolute;
     top: -25px;
     left: 725px;
-    z-index: ${({ tool }) => (tool === "cissors" ? 99999999999 : 0)};
+    z-index: ${({ tool }) => (tool === 'cissors' ? 99999999999 : 0)};
     .lineSegment {
       animation: flash 1s ease-in-out infinite;
       cursor: pointer;
@@ -59,16 +57,14 @@ export default styled.p`
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: lineDraw 5s linear 940ms forwards;
-    animation-play-state: ${props =>
-      props.animationStatus === "pause" ? "paused" : "running"};
+    animation-play-state: ${props => (props.animationStatus === 'pause' ? 'paused' : 'running')};
   }
 
   .moteur {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: lineDraw 5s linear 2800ms forwards;
-    animation-play-state: ${props =>
-      props.animationStatus === "pause" ? "paused" : "running"};
+    animation-play-state: ${props => (props.animationStatus === 'pause' ? 'paused' : 'running')};
   }
 
   @keyframes move {

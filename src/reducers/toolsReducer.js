@@ -1,9 +1,10 @@
-import { CISSORS } from "../types/index";
-export default (state = "", action) => {
+import { CISSORS } from '../types/index';
+
+export default (state = '', action) => {
   switch (action.type) {
     case CISSORS:
-      return "cissors";
+      return 'cissors';
     default:
-      return "";
+      return '';
   }
 };

@@ -20,7 +20,7 @@ const getContext = () => (dispatch) => {
   try {
     const {
       mode = 'default',
-      lang = 'en',
+      lang = 'fr',
       apiHost = DEFAULT_API_HOST,
       appInstanceId = null,
       spaceId = null,

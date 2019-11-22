@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import classNames from "classnames";
-import { withStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
-import Fab from "@material-ui/core/Fab";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import Styles from "../sidemenu/Styles";
-import { AppState } from "../../config/AppState";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';
+import Fab from '@material-ui/core/Fab';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Styles from '../sidemenu/Styles';
+import { AppState } from '../../config/AppState';
 import {
   toggleSideMenu,
   pauseAnimation,
@@ -15,35 +15,35 @@ import {
   addStep,
   incrementStepCounter,
   cutNerfMotor,
-  cutNerfSensitive
-} from "../../actions";
-import "./Main.css";
-import Steps from "./steps.json";
-import LegContainer from "./LegContainer.styled";
-import { ReactComponent as Nerf } from "../../resources/newParts/asset6.svg";
-//import { ReactComponent as Leg } from "../../resources/Leg.svg";
-//import { ReactComponent as Leg } from "../../resources/newParts/Leg.svg";
-import { ReactComponent as Leg } from "../../resources/newParts/asset7.svg";
-//import { ReactComponent as Hammer } from "../../resources/Hammer.svg";
-import { ReactComponent as Hammer } from "../../resources/newParts/Hammer.svg";
-//import { ReactComponent as Moelle } from "../../resources/Moelle.svg";
-import { ReactComponent as Moelle } from "../../resources/newParts/Moelle.svg";
-//import { ReactComponent as Moelle2 } from "../../resources/Moelle2.svg";
-import { ReactComponent as Moelle2 } from "../../resources/newParts/Moelle2.svg";
-import Timeout from "smart-timeout";
-//import Flow from "./Flow";
-import PopupStyled from "./Popup.styled";
-import Popup from "./Popup";
-import ToolBox from "./ToolBox";
-import ErrorPopup from "./ErrorPopup";
-import ErrorPopupStyled from "./ErrorPopup.styled";
+  cutNerfSensitive,
+} from '../../actions';
+import './Main.css';
+import Steps from './steps.json';
+import LegContainer from './LegContainer.styled';
+import { ReactComponent as Nerf } from '../../resources/newParts/asset6.svg';
+// import { ReactComponent as Leg } from "../../resources/Leg.svg";
+// import { ReactComponent as Leg } from "../../resources/newParts/Leg.svg";
+import { ReactComponent as Leg } from '../../resources/newParts/asset7.svg';
+// import { ReactComponent as Hammer } from "../../resources/Hammer.svg";
+import { ReactComponent as Hammer } from '../../resources/newParts/Hammer.svg';
+// import { ReactComponent as Moelle } from "../../resources/Moelle.svg";
+import { ReactComponent as Moelle } from '../../resources/newParts/Moelle.svg';
+// import { ReactComponent as Moelle2 } from "../../resources/Moelle2.svg";
+import { ReactComponent as Moelle2 } from '../../resources/newParts/Moelle2.svg';
+import Timeout from 'smart-timeout';
+// import Flow from "./Flow";
+import PopupStyled from './Popup.styled';
+import Popup from './Popup';
+import ToolBox from './ToolBox';
+import ErrorPopup from './ErrorPopup';
+import ErrorPopupStyled from './ErrorPopup.styled';
 
 const styles = Styles;
 
 class Main extends Component {
-  //state = AppState;
+  // state = AppState;
   state = {
-    redraw: 0
+    redraw: 0,
   };
 
   startAnimation = () => {
@@ -52,11 +52,11 @@ class Main extends Component {
     this.props.runAnimation();
 
     Timeout.set(
-      "stopAnimation",
+      'stopAnimation',
       () => {
         this.props.pauseAnimation();
       },
-      Steps[this.props.currentStep + 1].duration
+      Steps[this.props.currentStep + 1].duration,
     );
   };
 
@@ -69,12 +69,12 @@ class Main extends Component {
     this.setState({ redraw: Math.random() * 800 });
   };
 
-  cutNerf = e => {
+  cutNerf = (e) => {
     const line = e.target;
     line.style.strokeOpacity = 0;
-    if (line.classList.contains("nerfSensitive")) {
+    if (line.classList.contains('nerfSensitive')) {
       this.props.cutNerfSensitive();
-    } else if (line.classList.contains("nerfMotor")) {
+    } else if (line.classList.contains('nerfMotor')) {
       this.props.cutNerfMotor();
     }
   };
@@ -91,7 +91,7 @@ class Main extends Component {
       runAnimation,
       currentStep,
       tool,
-      nerfStatus
+      nerfStatus,
     } = this.props;
 
     const { nerfSensitive, nerfMotor } = nerfStatus;
@@ -99,24 +99,24 @@ class Main extends Component {
     return (
       <main
         className={classNames(classes.content, {
-          [classes.contentShift]: showSideMenu
+          [classes.contentShift]: showSideMenu,
         })}
       >
-        {showHeader ? <div className={classes.drawerHeader} /> : ""}
+        {showHeader ? <div className={classes.drawerHeader} /> : ''}
         {showHeader ? (
-          ""
+          ''
         ) : (
           <Fab
             color="primary"
             aria-label="Add"
             onClick={this.handleToggleSideMenu(!showSideMenu)}
             className={classes.fab}
-            style={{ backgroundColor: themeColor, outline: "none" }}
+            style={{ backgroundColor: themeColor, outline: 'none' }}
           >
             {showSideMenu ? (
               <ChevronRightIcon />
             ) : (
-              <MenuIcon style={{ color: "white" }} />
+              <MenuIcon style={{ color: 'white' }} />
             )}
           </Fab>
         )}
@@ -137,7 +137,6 @@ class Main extends Component {
             <Popup currentStep={currentStep} reDraw={this.reDraw} />
           </PopupStyled>
 
-          <h3>Reflexe Myotatique Rotulien</h3>
           <ToolBox />
           {/* {flow.length !== 0 && <Flow steps={Steps} reDraw={this.reDraw} />} */}
           <button
@@ -174,7 +173,7 @@ Main.propTypes = {
   themeColor: PropTypes.string.isRequired,
   showHeader: PropTypes.bool.isRequired,
   showSideMenu: PropTypes.bool.isRequired,
-  dispatchToggleSideMenu: PropTypes.func.isRequired
+  dispatchToggleSideMenu: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -185,7 +184,7 @@ const mapStateToProps = state => ({
   flow: state.flow,
   currentStep: state.currentStep,
   tool: state.tool,
-  nerfStatus: state.nerfStatus
+  nerfStatus: state.nerfStatus,
 });
 
 const mapDispatchToProps = {
@@ -195,7 +194,7 @@ const mapDispatchToProps = {
   addStep,
   incrementStepCounter,
   cutNerfMotor,
-  cutNerfSensitive
+  cutNerfSensitive,
 };
 
 const connectedComponent = connect(mapStateToProps, mapDispatchToProps)(Main);

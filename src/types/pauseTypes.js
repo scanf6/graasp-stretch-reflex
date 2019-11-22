@@ -1,2 +1,2 @@
-export const RUN = "RUN";
-export const PAUSE = "PAUSE";
+export const RUN = 'RUN';
+export const PAUSE = 'PAUSE';

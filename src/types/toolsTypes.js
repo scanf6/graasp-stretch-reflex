@@ -1,1 +1,1 @@
-export const CISSORS = "CISSROS";
+export const CISSORS = 'CISSROS';

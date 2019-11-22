@@ -1,4 +1,4 @@
-import { ADD_STEP_COUNT, RESET_STEP_COUNT } from "../types/index";
+import { ADD_STEP_COUNT, RESET_STEP_COUNT } from '../types/index';
 
 const initialState = -1;
 export default (state = initialState, action) => {

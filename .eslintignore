@@ -1,5 +1,5 @@
 build
 public
 coverage
-src/registerServiceWorker.js
+src
 cypress/integration/examples

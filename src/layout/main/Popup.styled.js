@@ -1,13 +1,14 @@
-import styled from "styled-components";
-import Steps from "./steps.json";
+import styled from 'styled-components';
+import Steps from './steps.json';
 
 export default styled.div`
-  display: ${({ animationStatus, nerfSensitive, nerfMotor, currentStep }) =>
-    (nerfSensitive === "intact" || currentStep === 0) &&
-    (nerfMotor === "intact" || currentStep === 0) &&
-    animationStatus === "pause"
-      ? "inline-block"
-      : "none"};
+  display: ${({
+    animationStatus, nerfSensitive, nerfMotor, currentStep,
+  }) => ((nerfSensitive === 'intact' || currentStep === 0)
+    && (nerfMotor === 'intact' || currentStep === 0)
+    && animationStatus === 'pause'
+    ? 'inline-block'
+    : 'none')};
   animation: fadeIn 1s;
   position: absolute;
   z-index: 99898989898;
@@ -30,13 +31,11 @@ export default styled.div`
     rgb(49, 49, 49)
   );
   color: white;
-  padding: ${({ currentStep }) => (currentStep === -1 ? 0 : "10px")};
+  padding: ${({ currentStep }) => (currentStep === -1 ? 0 : '10px')};
   font-size: 12px;
 
-  top: ${({ currentStep }) =>
-    currentStep === -1 ? 0 : Steps[currentStep].popupPosition[1] + "px"};
-  left: ${({ currentStep }) =>
-    currentStep === -1 ? 0 : Steps[currentStep].popupPosition[0] + "px"};
+  top: ${({ currentStep }) => (currentStep === -1 ? 0 : `${Steps[currentStep].popupPosition[1]}px`)};
+  left: ${({ currentStep }) => (currentStep === -1 ? 0 : `${Steps[currentStep].popupPosition[0]}px`)};
 
   @keyframes fadeIn {
     0% {
