@@ -3,19 +3,14 @@
   padding: 2rem;
 }
 
-#Layer_1 {
-  width: 800px;
-  height: auto;
-}
-
 .legContainer {
   text-align: center;
 }
 
 .hitButton {
   position: absolute;
-  top: 40%;
-  left: 35%;
+  top: 370%;
+  left: 30%;
   z-index: 999;
   border: none;
   background-color: rgb(236, 69, 69);

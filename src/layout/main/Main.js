@@ -24,17 +24,17 @@ import "./Main.css";
 import Steps from "./steps.json";
 import LegContainer from "./LegContainer.styled";
 import { ReactComponent as Nerf } from "../../resources/newParts/asset6.svg";
-// import { ReactComponent as Leg } from "../../resources/Leg.svg";
-// import { ReactComponent as Leg } from "../../resources/newParts/Leg.svg";
-import { ReactComponent as Leg } from "../../resources/newParts/asset7.svg";
-// import { ReactComponent as Hammer } from "../../resources/Hammer.svg";
+import { ReactComponent as Leg1 } from "../../resources/legAnimation/j1.svg";
+import { ReactComponent as Leg2 } from "../../resources/legAnimation/j2.svg";
+import { ReactComponent as Leg3 } from "../../resources/legAnimation/j3.svg";
+import { ReactComponent as Leg4 } from "../../resources/legAnimation/j4.svg";
+import { ReactComponent as Leg5 } from "../../resources/legAnimation/j5.svg";
+import { ReactComponent as Leg6 } from "../../resources/legAnimation/j6.svg";
 import { ReactComponent as Hammer } from "../../resources/newParts/Hammer.svg";
-// import { ReactComponent as Moelle } from "../../resources/Moelle.svg";
 import { ReactComponent as Moelle } from "../../resources/newParts/Moelle.svg";
-// import { ReactComponent as Moelle2 } from "../../resources/Moelle2.svg";
 import { ReactComponent as Moelle2 } from "../../resources/newParts/Moelle2.svg";
+
 import Timeout from "smart-timeout";
-// import Flow from "./Flow";
 import PopupStyled from "./Popup.styled";
 import Popup from "./Popup";
 import ToolBox from "./ToolBox";
@@ -46,7 +46,9 @@ const styles = Styles;
 class Main extends Component {
   // state = AppState;
   state = {
-    redraw: 0
+    redraw: 0,
+    visibleChild: 1,
+    animationInterval: null
   };
 
   startAnimation = () => {
@@ -54,6 +56,20 @@ class Main extends Component {
     this.props.addStep(Steps[this.props.currentStep + 1]);
     this.props.runAnimation();
 
+    //Handling Leg rotate animation
+    Timeout.set(
+      "legAnimation",
+      () => {
+        let int = setInterval(() => {
+          this.setState({ visibleChild: this.state.visibleChild + 1 });
+        }, 80);
+
+        this.setState({ animationInterval: int });
+      },
+      4100
+    );
+
+    //Handling animation reset
     Timeout.set(
       "stopAnimation",
       () => {
@@ -62,6 +78,7 @@ class Main extends Component {
         this.props.resetStepCounter();
         this.props.pauseAnimation();
         this.reDraw();
+        this.setState({ visibleChild: 1 });
       },
       6000
     );
@@ -102,6 +119,11 @@ class Main extends Component {
     } = this.props;
 
     const { nerfSensitive, nerfMotor } = nerfStatus;
+
+    //Handling leg rotation reset
+    if (this.state.visibleChild === 6) {
+      clearInterval(this.state.animationInterval);
+    }
 
     return (
       <main
@@ -161,9 +183,17 @@ class Main extends Component {
               runAnimation={runAnimation}
               pauseAnimation={pauseAnimation}
               tool={tool}
+              visibleChild={this.state.visibleChild}
             >
               <Hammer width="50px" />
-              <Leg width="500px" />
+              <span className="animationContainer">
+                <Leg1 className="leg" width="500px" />
+                <Leg2 className="leg" width="500px" />
+                <Leg3 className="leg" width="500px" />
+                <Leg4 className="leg" width="500px" />
+                <Leg5 className="leg" width="500px" />
+                <Leg6 className="leg" width="500px" />
+              </span>
               <Moelle2 width="400px" />
               <Nerf width="300px" onClick={this.cutNerf} />
               <Moelle width="300px" />
