@@ -36,6 +36,7 @@ import { ReactComponent as Moelle2 } from "../../resources/newParts/Moelle2.svg"
 
 import Timeout from "smart-timeout";
 import PopupStyled from "./Popup.styled";
+import PartPopup from "./PartPopup";
 import Popup from "./Popup";
 import ToolBox from "./ToolBox";
 import ErrorPopup from "./ErrorPopup";
@@ -48,7 +49,8 @@ class Main extends Component {
   state = {
     redraw: 0,
     visibleChild: 1,
-    animationInterval: null
+    animationInterval: null,
+    hoveredElement: null
   };
 
   startAnimation = () => {
@@ -80,7 +82,7 @@ class Main extends Component {
         this.reDraw();
         this.setState({ visibleChild: 1 });
       },
-      6000
+      5000
     );
   };
 
@@ -100,6 +102,31 @@ class Main extends Component {
       this.props.cutNerfSensitive();
     } else if (line.classList.contains("nerfMotor")) {
       this.props.cutNerfMotor();
+    }
+  };
+
+  displayInfo = e => {
+    if (this.state.hoveredElement) {
+      const { target, stroke, strokeWidth, fill } = this.state.hoveredElement;
+      target.style.stroke = stroke;
+      target.style.fill = fill;
+      target.style.strokeWidth = strokeWidth;
+      this.setState({ hoveredElement: null });
+    } else {
+      const element = {
+        target: e.target,
+        title: e.target.getAttribute("data-title"),
+        description: e.target.getAttribute("data-description"),
+        popupXY: [e.clientX, e.clientY],
+        stroke: e.target.style.stroke,
+        strokeWidth: e.target.style.strokeWidth,
+        fill: e.target.style.fill
+      };
+
+      this.setState({ hoveredElement: element });
+      element.target.style.stroke = "red";
+      element.target.style.fill = "rgba(255, 99, 71, 0.582)";
+      element.target.style.strokeWidth = 3;
     }
   };
 
@@ -185,16 +212,23 @@ class Main extends Component {
               tool={tool}
               visibleChild={this.state.visibleChild}
             >
+              {this.state.hoveredElement && (
+                <PartPopup
+                  title={this.state.hoveredElement.title}
+                  description={this.state.hoveredElement.description}
+                  position={this.state.hoveredElement.popupXY}
+                />
+              )}
               <Hammer width="3.5%" />
               <span className="animationContainer">
-                <Leg1 className="leg" width="35%" />
+                <Leg1 className="leg" width="35%" onClick={this.displayInfo} />
                 <Leg2 className="leg" width="35%" />
                 <Leg3 className="leg" width="35%" />
                 <Leg4 className="leg" width="35%" />
                 <Leg5 className="leg" width="35%" />
                 <Leg6 className="leg" width="35%" />
               </span>
-              <Moelle2 width="25%" />
+              <Moelle2 width="25%" onClick={this.displayInfo} />
               <Nerf width="21%" onClick={this.cutNerf} />
               <Moelle width="21%" />
             </LegContainer>
