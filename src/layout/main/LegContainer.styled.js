@@ -2,6 +2,24 @@ import styled from "styled-components";
 
 export default styled.div`
   position: relative;
+  path {
+    pointer-events: visibleFill;
+  }
+
+  .partPopup {
+    display: inline-block;
+    position: absolute;
+    border: 1px solid gray;
+    background-color: #ecf0f1;
+    .title {
+      background-color: #95a5a6;
+      padding: 5px;
+    }
+
+    .description {
+      padding: 10px;
+    }
+  }
   .animationContainer {
     .leg {
       position: absolute;
