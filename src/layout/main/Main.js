@@ -185,18 +185,18 @@ class Main extends Component {
               tool={tool}
               visibleChild={this.state.visibleChild}
             >
-              <Hammer width="50px" />
+              <Hammer width="3.5%" />
               <span className="animationContainer">
-                <Leg1 className="leg" width="500px" />
-                <Leg2 className="leg" width="500px" />
-                <Leg3 className="leg" width="500px" />
-                <Leg4 className="leg" width="500px" />
-                <Leg5 className="leg" width="500px" />
-                <Leg6 className="leg" width="500px" />
+                <Leg1 className="leg" width="35%" />
+                <Leg2 className="leg" width="35%" />
+                <Leg3 className="leg" width="35%" />
+                <Leg4 className="leg" width="35%" />
+                <Leg5 className="leg" width="35%" />
+                <Leg6 className="leg" width="35%" />
               </span>
-              <Moelle2 width="400px" />
-              <Nerf width="300px" onClick={this.cutNerf} />
-              <Moelle width="300px" />
+              <Moelle2 width="25%" />
+              <Nerf width="21%" onClick={this.cutNerf} />
+              <Moelle width="21%" />
             </LegContainer>
           </div>
         </div>

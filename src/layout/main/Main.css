@@ -5,11 +5,12 @@
 
 .legContainer {
   text-align: center;
+  min-height: 400px;
 }
 
 .hitButton {
   position: absolute;
-  top: 370%;
+  top: 50%;
   left: 30%;
   z-index: 999;
   border: none;
@@ -60,6 +61,16 @@
   background-color: rgb(255, 255, 255);
   color: #474747;
 }
+
+@media screen and (max-width: 1280px) {
+  /* .leg {
+    top: 9em !important;
+  }
+  #hammer {
+    top: 8em !important;
+  } */
+}
+
 
 @keyframes wave {
   0% {

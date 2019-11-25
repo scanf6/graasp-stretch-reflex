@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export default styled.div`
   position: relative;
+  min-height: 400px;
   .animationContainer {
     .leg {
       position: absolute;
-      top: 180px;
+      top: 36%;
       left: 21%;
       display: none;
       &:nth-of-type(${props => props.visibleChild}) {
@@ -16,8 +17,8 @@ export default styled.div`
 
   #hammer {
     position: absolute;
-    top: 190px;
-    left: 40.9%;
+    top: 35%;
+    left: 41.2%;
     transform: rotate(10deg);
     animation: hit 0.8s;
     animation-play-state: ${props =>
@@ -31,19 +32,19 @@ export default styled.div`
   }
 
   #moelle2 {
-    top: -13%;
+    top: 0;
     left: 61%;
   }
   #moelle {
     z-index: 99999;
-    top: 30px;
-    left: 725px;
+    top: 6%;
+    left: 50%;
   }
 
   #nerfs {
     position: absolute;
-    top: 30px;
-    left: 725px;
+    top: 6%;
+    left: 50%;
     z-index: ${({ tool }) => (tool === "cissors" ? 99999999999 : 0)};
     .lineSegment {
       cursor: pointer;
