@@ -33,14 +33,16 @@ import { ReactComponent as Leg6 } from "../../resources/legAnimation/j6.svg";
 import { ReactComponent as Hammer } from "../../resources/newParts/Hammer.svg";
 import { ReactComponent as Moelle } from "../../resources/newParts/Moelle.svg";
 import { ReactComponent as Moelle2 } from "../../resources/newParts/Moelle2.svg";
-
 import Timeout from "smart-timeout";
-import PopupStyled from "./Popup.styled";
 import PartPopup from "./PartPopup";
-import Popup from "./Popup";
+import NerfCutPopup from "./NerfCutPopup";
 import ToolBox from "./ToolBox";
-import ErrorPopup from "./ErrorPopup";
-import ErrorPopupStyled from "./ErrorPopup.styled";
+
+//====== UNUSED FOR NOW ========================================
+//import Popup from "./Popup.unused";
+//import PopupStyled from "./Popup.styled.unused";
+//import ErrorPopup from "./ErrorPopup.unused";
+//import ErrorPopupStyled from "./ErrorPopup.styled.unused";
 
 const styles = Styles;
 
@@ -50,7 +52,9 @@ class Main extends Component {
     redraw: 0,
     visibleChild: 1,
     animationInterval: null,
-    hoveredElement: null
+    hoveredElement: null,
+    disabledCauseCut: false,
+    disabledMessage: ""
   };
 
   startAnimation = () => {
@@ -59,17 +63,22 @@ class Main extends Component {
     this.props.runAnimation();
 
     //Handling Leg rotate animation
-    Timeout.set(
-      "legAnimation",
-      () => {
-        let int = setInterval(() => {
-          this.setState({ visibleChild: this.state.visibleChild + 1 });
-        }, 80);
+    if (
+      this.props.nerfStatus.nerfSensitive !== "cut" &&
+      this.props.nerfStatus.nerfMotor !== "cut"
+    ) {
+      Timeout.set(
+        "legAnimation",
+        () => {
+          let int = setInterval(() => {
+            this.setState({ visibleChild: this.state.visibleChild + 1 });
+          }, 80);
 
-        this.setState({ animationInterval: int });
-      },
-      4100
-    );
+          this.setState({ animationInterval: int });
+        },
+        4100
+      );
+    }
 
     //Handling animation reset
     Timeout.set(
@@ -84,6 +93,47 @@ class Main extends Component {
       },
       5000
     );
+
+    //Handling nerf cut status
+    const { nerfSensitive, nerfMotor } = this.props.nerfStatus;
+    if (nerfSensitive === "cut") {
+      Timeout.set(
+        "stopAnimation",
+        () => {
+          this.props.resetFlow();
+          this.props.resetNerfs();
+          this.props.resetStepCounter();
+          this.props.pauseAnimation();
+          this.setState({
+            disabledCauseCut: true,
+            disabledMessage: "Nerf Sensitif sectionner"
+          });
+        },
+        1000
+      );
+    } else if (nerfMotor === "cut") {
+      Timeout.set(
+        "stopAnimation",
+        () => {
+          this.props.resetFlow();
+          this.props.resetNerfs();
+          this.props.resetStepCounter();
+          this.props.pauseAnimation();
+          this.setState({
+            disabledCauseCut: true,
+            disabledMessage: "Nerf Moteur sectionner"
+          });
+        },
+        2900
+      );
+    }
+  };
+
+  resetCutState = () => {
+    this.setState({
+      disabledCauseCut: false,
+      disabledMessage: ""
+    });
   };
 
   handleToggleSideMenu = open => () => {
@@ -177,7 +227,7 @@ class Main extends Component {
           </Fab>
         )}
         <div className="main-container">
-          <ErrorPopupStyled
+          {/*           <ErrorPopupStyled
             currentStep={currentStep}
             nerfSensitive={nerfSensitive}
             nerfMotor={nerfMotor}
@@ -191,13 +241,12 @@ class Main extends Component {
             nerfMotor={nerfMotor}
           >
             <Popup currentStep={currentStep} reDraw={this.reDraw} />
-          </PopupStyled>
+          </PopupStyled> */}
 
           <ToolBox />
-          {/* {flow.length !== 0 && <Flow steps={Steps} reDraw={this.reDraw} />} */}
           <button
             className="hitButton"
-            disabled={flow.length !== 0}
+            disabled={flow.length !== 0 || this.state.disabledCauseCut}
             onClick={this.startAnimation}
           >
             Frapper!
@@ -212,13 +261,22 @@ class Main extends Component {
               tool={tool}
               visibleChild={this.state.visibleChild}
             >
-              {this.state.hoveredElement && (
-                <PartPopup
-                  title={this.state.hoveredElement.title}
-                  description={this.state.hoveredElement.description}
-                  position={this.state.hoveredElement.popupXY}
-                />
-              )}
+              <div id="popups">
+                {this.state.disabledCauseCut && (
+                  <NerfCutPopup
+                    title={this.state.disabledMessage}
+                    reDraw={this.reDraw}
+                    resetCutState={this.resetCutState}
+                  />
+                )}
+                {this.state.hoveredElement && (
+                  <PartPopup
+                    title={this.state.hoveredElement.title}
+                    description={this.state.hoveredElement.description}
+                    position={this.state.hoveredElement.popupXY}
+                  />
+                )}
+              </div>
               <Hammer width="3.5%" />
               <span className="animationContainer">
                 <Leg1 className="leg" width="35%" onClick={this.displayInfo} />

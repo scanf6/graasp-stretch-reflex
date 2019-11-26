@@ -2,13 +2,8 @@
   position: absolute;
   z-index: 1;
   display: inline-block;
-  color: white;
+  color: rgb(78, 78, 78);
   padding: 10px;
-  background: linear-gradient(
-    to right bottom,
-    rgb(39, 39, 39),
-    rgb(49, 49, 49)
-  );
 }
 
 .toolBox b {

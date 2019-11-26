@@ -7,8 +7,8 @@ const PartPopup = ({ title, description, position }) => {
     <div
       className="partPopup"
       style={{
-        top: "50%",
-        left: "30%",
+        top: "40%",
+        left: "0%",
         width: "400px"
       }}
     >

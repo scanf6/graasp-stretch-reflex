@@ -4,23 +4,48 @@ export default styled.div`
   position: relative;
   min-height: 400px;
   path {
-    pointer-events: visibleFill;
+    pointer-events: all;
   }
 
-  .partPopup {
-    display: inline-block;
+  #popups {
     position: absolute;
-    border: 1px solid gray;
-    background-color: #ecf0f1;
-    .title {
-      background-color: #95a5a6;
-      padding: 5px;
+    top: 40%;
+    left: 0;
+    z-index: 99999999999;
+    .partPopup {
+      display: inline-block;
+
+      border: 1px solid gray;
+      background-color: #ecf0f1;
+      .title {
+        background-color: #95a5a6;
+        padding: 5px;
+      }
+
+      .description {
+        padding: 10px;
+      }
     }
 
-    .description {
+    .nerfCutPopup {
+      border: 1px solid tomato;
+      color: tomato;
       padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      animation: shake 0.5s ease-in-out;
+
+      button {
+        color: white;
+        background-color: tomato;
+        padding: 3px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
     }
   }
+
   .animationContainer {
     .leg {
       position: absolute;
@@ -104,6 +129,27 @@ export default styled.div`
   @keyframes lineDraw {
     to {
       stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(10px);
+    }
+    40% {
+      transform: translateX(-10px);
+    }
+    60% {
+      transform: translateX(10px);
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
     }
   }
 `;

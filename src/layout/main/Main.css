@@ -10,8 +10,8 @@
 
 .hitButton {
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 45%;
+  left: 32%;
   z-index: 999;
   border: none;
   background-color: rgb(236, 69, 69);
@@ -70,7 +70,6 @@
     top: 8em !important;
   } */
 }
-
 
 @keyframes wave {
   0% {
