@@ -95,7 +95,7 @@ class Main extends Component {
     );
 
     //Handling nerf cut status
-    const { nerfSensitive, nerfMotor } = this.props.nerfStatus;
+    const { nerfSensitive, nerfMotor, pauseOn } = this.props.nerfStatus;
     if (nerfSensitive === "cut") {
       Timeout.set(
         "stopAnimation",
@@ -109,7 +109,7 @@ class Main extends Component {
             disabledMessage: "Nerf Sensitif sectionner"
           });
         },
-        1000
+        pauseOn
       );
     } else if (nerfMotor === "cut") {
       Timeout.set(
@@ -124,7 +124,7 @@ class Main extends Component {
             disabledMessage: "Nerf Moteur sectionner"
           });
         },
-        2900
+        pauseOn
       );
     }
   };
@@ -147,11 +147,12 @@ class Main extends Component {
 
   cutNerf = e => {
     const line = e.target;
+    const pauseCutAnimation = line.getAttribute("data-duration");
     line.style.strokeOpacity = 0;
     if (line.classList.contains("nerfSensitive")) {
-      this.props.cutNerfSensitive();
+      this.props.cutNerfSensitive(pauseCutAnimation);
     } else if (line.classList.contains("nerfMotor")) {
-      this.props.cutNerfMotor();
+      this.props.cutNerfMotor(pauseCutAnimation);
     }
   };
 
@@ -190,12 +191,8 @@ class Main extends Component {
       flow,
       pauseAnimation,
       runAnimation,
-      currentStep,
-      tool,
-      nerfStatus
+      tool
     } = this.props;
-
-    const { nerfSensitive, nerfMotor } = nerfStatus;
 
     //Handling leg rotation reset
     if (this.state.visibleChild === 6) {
@@ -227,22 +224,6 @@ class Main extends Component {
           </Fab>
         )}
         <div className="main-container">
-          {/*           <ErrorPopupStyled
-            currentStep={currentStep}
-            nerfSensitive={nerfSensitive}
-            nerfMotor={nerfMotor}
-          >
-            <ErrorPopup reDraw={this.reDraw} />
-          </ErrorPopupStyled>
-          <PopupStyled
-            currentStep={currentStep}
-            animationStatus={animation}
-            nerfSensitive={nerfSensitive}
-            nerfMotor={nerfMotor}
-          >
-            <Popup currentStep={currentStep} reDraw={this.reDraw} />
-          </PopupStyled> */}
-
           <ToolBox />
           <button
             className="hitButton"

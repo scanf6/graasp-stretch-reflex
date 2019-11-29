@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import scis32 from "../../resources/scis32.png";
 
 export default styled.div`
   position: relative;
   min-height: 400px;
+  cursor: ${({ tool }) =>
+    tool === "cissors" ? `url(${scis32}) 32 16,default` : ""};
+
   path {
     pointer-events: all;
   }
@@ -90,11 +94,15 @@ export default styled.div`
     left: 50%;
     z-index: ${({ tool }) => (tool === "cissors" ? 99999999999 : 0)};
     .lineSegment {
-      cursor: pointer;
       &:hover {
-        stroke-width: 5px !important;
-        stroke: black !important;
+        stroke-width: 7px !important;
+        stroke: whitesmoke !important;
       }
+    }
+
+    path {
+      animation: ${({ tool }) =>
+        tool === "cissors" ? "flash 1s ease-in-out infinite" : "none"};
     }
   }
 
@@ -150,6 +158,20 @@ export default styled.div`
     }
     100% {
       transform: translateX(0);
+    }
+  }
+
+  @keyframes flash {
+    0% {
+      stroke-width: 2;
+    }
+
+    50% {
+      stroke-width: 6;
+    }
+
+    100% {
+      stroke-width: 2;
     }
   }
 `;
