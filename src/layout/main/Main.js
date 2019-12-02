@@ -147,6 +147,7 @@ class Main extends Component {
 
   cutNerf = e => {
     const line = e.target;
+    if (line.tagName === "svg") return;
     const pauseCutAnimation = line.getAttribute("data-duration");
     line.style.strokeOpacity = 0;
     if (line.classList.contains("nerfSensitive")) {
@@ -157,6 +158,7 @@ class Main extends Component {
   };
 
   displayInfo = e => {
+    if (this.props.tool === "cissors") return;
     if (this.state.hoveredElement) {
       const { target, stroke, strokeWidth, fill } = this.state.hoveredElement;
       target.style.stroke = stroke;
@@ -227,7 +229,11 @@ class Main extends Component {
           <ToolBox />
           <button
             className="hitButton"
-            disabled={flow.length !== 0 || this.state.disabledCauseCut}
+            disabled={
+              flow.length !== 0 ||
+              this.state.disabledCauseCut ||
+              tool === "cissors"
+            }
             onClick={this.startAnimation}
           >
             Frapper!
