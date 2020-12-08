@@ -1,6 +1,6 @@
-# Graasp Lab Default Theme
+# Graasp Stretch reflex lab
 
-This is the default theme for all Labs repository. Initially configured with Redux, language and theme settings with the controls panel.
+This is the the stretch reflex Labs repository. Initially configured with Redux, language and theme settings with the controls panel.
 
 This Lab was created using [Graasp App Starter React](https://github.com/react-epfl/graasp-app-starter-react)
 
