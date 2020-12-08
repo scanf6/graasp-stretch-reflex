@@ -1,0 +1,26 @@
+.toolBox {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  color: rgb(78, 78, 78);
+  padding: 10px;
+}
+
+.toolBox b {
+  color: #d24a44;
+  /* display: block; */
+  /* margin-bottom: 15px; */
+}
+
+.toolBox .tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.toolBox .tools button {
+  margin-right: 10px;
+}
+.cancelButton:focus{
+  outline: none;
+}

@@ -11,7 +11,7 @@
 .hitButton {
   position: absolute;
   top: 45%;
-  left: 32%;
+  left: 20%;
   z-index: 999;
   border: none;
   background-color: rgb(236, 69, 69);
@@ -62,15 +62,526 @@
   color: #474747;
 }
 
-@media screen and (max-width: 1280px) {
-  /* .leg {
-    top: 9em !important;
-  }
-  #hammer {
-    top: 8em !important;
-  } */
+.lottie-container1{
+  position: absolute;
+  left: 32%;
+  top: 14.5%;
 }
 
+.lottie-container2{
+  transform: rotate(30deg);
+  position: absolute;
+  left: 54%;
+  top: 45%;
+}
+
+.lottie-container3{
+  transform: rotate(130deg);
+  position: absolute;
+  left: 52%;
+  top: 62%;
+}
+
+.ml-2{
+  margin-left: 2rem;
+}
+@media screen and (max-width: 399px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 170px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 29%;
+    top: 35%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 20% !important;
+    left: 77.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 400px)and (max-width: 420px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 190px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 29%;
+    top: 33%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 20% !important;
+    left: 79.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 421px)and (max-width: 449px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 210px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 29%;
+    top: 32%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 20% !important;
+    left: 79.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 450px)and (max-width: 474px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 200px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 31%;
+    top: 33%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 20% !important;
+    left: 75.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 475px)and (max-width: 499px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 220px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 32%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 20% !important;
+    left: 77.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 500px)and (max-width: 524px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 220px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 32%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 20% !important;
+    left: 74.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 525px)and (max-width: 554px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 230px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 31%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 20% !important;
+    left: 73.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 555px)and (max-width: 584px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 240px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 31.5%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 21% !important;
+    left: 72.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 585px)and (max-width: 621px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 260px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 29.5%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 21% !important;
+    left: 72.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 622px)and (max-width: 659px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 270px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 29.5%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 21% !important;
+    left: 70.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 660px)and (max-width: 699px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 290px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 28.5%;
+  }
+  #moelle2{
+    width: 25%;
+    top: 21% !important;
+    left: 70.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and  (min-width: 700px)and (max-width: 739px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 290px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 28.5%;
+  }
+  #moelle2{
+    width: 23%;
+    top: 21% !important;
+    left: 68.5% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and (min-width: 740px)and (max-width: 789px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 335px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 26%;
+  }
+  #moelle2{
+    width: 27%;
+    top: 21% !important;
+    left: 70% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and (min-width: 790px) and (max-width: 849px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 360px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 24.5%;
+  }
+  #moelle2{
+    width: 27%;
+    top: 21% !important;
+    left: 70% !important;
+  }
+  .lottie-container3{
+    transform: rotate(130deg);
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
+@media screen and (min-width: 850px) and (max-width: 899px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 390px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 23.5%;
+  }
+  #moelle2{
+    width: 28%;
+    /* top: 25% !important; */
+    left: 70% !important;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 974px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 390px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 24.5%;
+  }
+  #moelle2{
+    /* width: 23%; */
+    /* top: 25% !important; */
+    left: 57.5% !important;
+  }
+}
+@media screen and (min-width: 975px) and (max-width: 1037px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 390px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 24.5%;
+  }
+  #moelle2{
+    /* width: 23%; */
+    /* top: 25% !important; */
+    left: 54% !important;
+  }
+}
+@media screen and (min-width: 1038px) and (max-width: 1094px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 450px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 21.5%;
+  }
+  #moelle2{
+    /* width: 23%; */
+    /* top: 25% !important; */
+    left: 57% !important;
+  }
+}
+@media all and (min-width: 1095px) and (max-width: 1159px) {
+  .lottie-container1 div[aria-label="animation"]{
+    width: 425px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 22.5%;
+  }
+  #moelle2{
+    /* width: 25%; */
+    top: 25% !important;
+    /* left: 62% !important; */
+  }
+  .lottie-container3 {
+    transform: rotate(130deg);
+    position: absolute;
+    left: 50%;
+    top: 62%;
+  }
+}
+@media all and (min-width: 1160px) and (max-width: 1239px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 460px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 20.5%;
+  }
+}
+@media all and (min-width: 1240px) and (max-width: 1319px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 495px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 19.5%;
+  }
+}
+@media all and (min-width: 1320px) and (max-width: 1389px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 620px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 12.5%;
+  }
+  #moelle2{
+    /* width: 25%; */
+    /* top: 25% !important; */
+    left: 59% !important;
+  }
+}
+@media all and (min-width: 1390px) and (max-width: 1459px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 560px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 15.5%;
+  }
+}
+@media all and (min-width: 1460px) and (max-width: 1539px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 590px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 32%;
+    top: 15.5%;
+  }
+}
+@media all and (min-width: 1540px) and (max-width: 1600px){
+  .lottie-container1 div[aria-label="animation"]{
+    width: 600px !important;
+  }
+  .lottie-container1{
+    position: absolute;
+    left: 34%;
+    top: 14.5%;
+  }
+  #moelle2{
+    width: 45%;
+    /* top: 25% !important; */
+    /* left: 62% !important; */
+  }
+}
+  @media all and (max-width: 514px){
+    .toolBox button span{
+      font-size: 6px;
+    }
+    .hitButton{
+      width: 50px;
+      height: 50px;
+      font-size: 11px;
+    }
+  }
+  @media all and (min-width: 515px) and (max-width: 600px){
+    .toolBox button span{
+      font-size: 8px;
+    }
+    .hitButton{
+      width: 50px;
+      height: 50px;
+      font-size: 11px;
+    }
+  }
+  @media all and (min-width: 600px) and (max-width: 899px){
+    .toolBox button span{
+      font-size: 10px;
+    }
+    .hitButton{
+      width: 50px;
+      height: 50px;
+      font-size: 11px;
+    }
+    .lottie-container3{
+      transform: rotate(130deg);
+      position: absolute;
+      left: 48%;
+      top: 50%;
+    }
+  }
+  @media all and (min-width: 900px) and (max-width: 1024px){
+    .toolBox button span{
+      font-size: 12px;
+    }
+    .hitButton{
+      width: 70px;
+      height: 70px;
+      font-size: 13px;
+    }
+    .lottie-container3{
+      transform: rotate(130deg);
+      position: absolute;
+      left: 48%;
+      top: 50%;
+    }
+  }
 @keyframes wave {
   0% {
     transform: scale(1);

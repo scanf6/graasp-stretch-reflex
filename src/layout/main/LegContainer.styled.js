@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import scis32 from "../../resources/scis32.png";
+import styled from 'styled-components';
+import scis32 from '../../resources/scis32.png';
 
 export default styled.div`
   position: relative;
   min-height: 400px;
   cursor: ${({ tool }) =>
-    tool === "cissors" ? `url(${scis32}) 32 16,default` : ""};
+    tool === 'cissors' ? `url(${scis32}) 32 16,default` : ''};
 
   path {
     pointer-events: all;
@@ -53,8 +53,8 @@ export default styled.div`
   .animationContainer {
     .leg {
       position: absolute;
-      top: 36%;
-      left: 21%;
+      top: 43%;
+      left: 8.1%;
       display: none;
       &:nth-of-type(${props => props.visibleChild}) {
         display: inline-block;
@@ -64,23 +64,22 @@ export default styled.div`
 
   #hammer {
     position: absolute;
-    top: 35%;
-    left: 41.2%;
+    top: 48%;
+    left: 28%;
     transform: rotate(10deg);
     animation: hit 0.8s;
     animation-play-state: ${props =>
-      props.animationStatus === "pause" ? "paused" : "running"};
+      props.animationStatus === 'pause' ? 'paused' : 'running'};
   }
 
   #moelle,
   #moelle2 {
     position: absolute;
-    right: 10%;
   }
 
   #moelle2 {
-    top: 0;
-    left: 61%;
+    top: 23%;
+    left: 52%;
   }
   #moelle {
     z-index: 99999;
@@ -92,7 +91,7 @@ export default styled.div`
     position: absolute;
     top: 6%;
     left: 50%;
-    z-index: ${({ tool }) => (tool === "cissors" ? 99999999999 : 0)};
+    z-index: ${({ tool }) => (tool === 'cissors' ? 99999999999 : 0)};
     .lineSegment {
       &:hover {
         stroke-width: 7px !important;
@@ -102,24 +101,24 @@ export default styled.div`
 
     path {
       animation: ${({ tool }) =>
-        tool === "cissors" ? "flash 1s ease-in-out infinite" : "none"};
+        tool === 'cissors' ? 'flash 1s ease-in-out infinite' : 'none'};
     }
   }
 
   .sensitif {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: lineDraw 5s linear 940ms forwards;
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+    animation: lineDraw 15s linear 940ms forwards;
     animation-play-state: ${props =>
-      props.animationStatus === "pause" ? "paused" : "running"};
+      props.animationStatus === 'pause' ? 'paused' : 'running'};
   }
 
   .moteur {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: lineDraw 5s linear 2800ms forwards;
+    animation: lineDraw 15s linear 6000ms forwards;
     animation-play-state: ${props =>
-      props.animationStatus === "pause" ? "paused" : "running"};
+      props.animationStatus === 'pause' ? 'paused' : 'running'};
   }
 
   @keyframes hit {
