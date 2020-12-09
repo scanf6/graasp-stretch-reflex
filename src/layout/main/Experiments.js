@@ -33,7 +33,7 @@ class Experiments extends Component {
     }
     return (
       <div className="toolBox">
-        <b className="h3">Experiences de section</b>
+        <b className="h3">Exériences de section</b>
         <div>
           <p>
             <span>

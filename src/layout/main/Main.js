@@ -98,10 +98,10 @@ class Main extends Component {
       Toast.fire({ icon: 'error', title: 'Nerf sensitif et nerf moteur sectionnés!' });
     }
     else if(illustrationCutNerfMotor) {
-      Toast.fire({ icon: 'error', title: 'Nerf moteur sectionner!' });
+      Toast.fire({ icon: 'error', title: 'Nerf moteur sectionné!' });
     }
     else if(illustrationCutNerfSensitif) {
-      Toast.fire({ icon: 'error', title: 'Nerf sensitif sectionner!' });
+      Toast.fire({ icon: 'error', title: 'Nerf sensitif sectionné!' });
     }
     this.props.incrementStepCounter();
     this.props.addStep(Steps[this.props.currentStep + 1]);
