@@ -33,9 +33,10 @@ class Experiments extends Component {
     }
     return (
       <div className="toolBox">
-        <b className="h3">Exériences de section</b>
+        <b className="h3">Expériences de section</b>
         <div>
           <p>
+          {!nerfMotorCut &&
             <span>
               {!nerfSensitiveCut
                 ? <Button disabled={nerfSensitiveCut || nerfMotorCut} onClick={()=>startAnimationCutNerfSensitif()} variant="contained" color="primary"><Done/> Sectionner le nerf sensitif</Button> 
@@ -43,13 +44,15 @@ class Experiments extends Component {
               }
               {nerfSensitiveCut && (
                 <>
-                <Button disabled={!nerfSensitiveCut} onClick={()=>cutBoutPeripherique()} className="ml-2" variant="contained" style={stimulationButtonStyle}>Stimuler bout périphérique</Button>
-                <Button disabled={!nerfSensitiveCut} onClick={()=>cutBoutCentral()} className="ml-2" variant="contained" style={stimulationButtonStyle}>Stimuler bout central</Button>
+                <Button disabled={!nerfSensitiveCut} onClick={()=>cutBoutPeripherique()} className="ml-2" variant="contained" style={stimulationButtonStyle}>Stimuler le bout périphérique</Button>
+                <Button disabled={!nerfSensitiveCut} onClick={()=>cutBoutCentral()} className="ml-2" variant="contained" style={stimulationButtonStyle}>Stimuler le bout central</Button>
                 </>
               )}
             </span>
+          }
           </p>
           <p>
+          {!nerfSensitiveCut &&
             <span>
               {!nerfMotorCut
                 ? <Button disabled={nerfMotorCut || nerfSensitiveCut} onClick={()=>startAnimationCutNerfMotor()} variant="contained" color="primary"><Done/> Sectionner le nerf moteur</Button>
@@ -57,11 +60,12 @@ class Experiments extends Component {
               }
               {nerfMotorCut && (
                 <>
-                <Button disabled={!nerfMotorCut} onClick={()=>cutMotorBoutPeripherique()} className="ml-2" variant="contained" style={stimulationButtonStyle}>Stimuler bout peripherique</Button>
-                <Button disabled={!nerfMotorCut} onClick={()=>cutMotorBoutCentral()} className="ml-2" variant="contained" style={stimulationButtonStyle}>Stimuler bout central</Button>
+                <Button disabled={!nerfMotorCut} onClick={()=>cutMotorBoutPeripherique()} className="ml-2" variant="contained" style={stimulationButtonStyle}>Stimuler le bout périphérique</Button>
+                <Button disabled={!nerfMotorCut} onClick={()=>cutMotorBoutCentral()} className="ml-2" variant="contained" style={stimulationButtonStyle}>Stimuler le bout central</Button>
                 </>
               )}
             </span>
+          }
           </p>
         </div>
         {/* <div className="tools">
