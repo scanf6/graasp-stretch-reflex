@@ -92,6 +92,12 @@ class Main extends Component {
     stimulMotorBCPause: false
   };
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if(!nextProps.showSideMenu && !this.props.showSideMenu) return true;
+    else if(nextProps.showSideMenu || !nextProps.showSideMenu) return false;
+    else return true;
+  }
+
   startAnimation = () => {
     const { illustrationCutNerfMotor, illustrationCutNerfSensitif } = this.state;
     if(illustrationCutNerfSensitif && illustrationCutNerfMotor) {
